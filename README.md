@@ -13,50 +13,49 @@ This project focuses on a strategic analysis of real e-commerce data from the Wi
 📊 Key Analyses & Logic
 
 1. Data Preparation & Cleaning (ETL in MySQL)
-* **Redundancy Elimination:** Removed the `title` column as it was completely identical to `title_orig`, optimizing storage.
-* **Structural Filtering:** Excluded columns irrelevant to business performance, such as merchant profile pictures (`merchant_profile_picture`, `merchant_has_profile_picture`), product URLs, and product pictures.
-* **Seasonal Context Isolation:** Removed `crawl_month` and `theme` columns since the dataset was strictly restricted to August (Summer season), avoiding biased interpretations.
-* **Feature Engineering:** Created columns for price segment comparison (Merchant Price vs. Retail Price) and market sales status (Above/Below market average).
+* Removed the `title` column as it was completely identical to `title_orig`, optimizing storage.
+* Excluded columns irrelevant to business performance, such as merchant profile pictures (`merchant_profile_picture`, `merchant_has_profile_picture`), product URLs, and product pictures.
+* Removed `crawl_month` and `theme` columns since the dataset was strictly restricted to August (Summer season), avoiding biased interpretations.
+* Created columns for price segment comparison (Merchant Price vs. Retail Price) and market sales status (Above/Below market average).
   * Calculated gross revenue (`Revenue`) as a normalized metric by multiplying product price by total units sold.
-* **Relational Modeling:** Extracted and normalized product tags into a separate table to allow granular niche filtering without duplicating core product records.
+* Extracted and normalized product tags into a separate table to allow granular niche filtering without duplicating core product records.
 
 2. Product Performance & Satiation Analysis
-* Identified top-performing niches, with "Women's Fashion" emerging as the dominant category.
-* Cross-referenced sales volume with seasonal factors to isolate the *"Summer Effect"*.
+* Identified top-performing tags, with "Women's Fashion" emerging as the most used.
+* The store specialises in women's clothing and caters to the needs of its female customers.
 
 3. Rating & Customer Sentiment Analysis
 * Analyzed the distribution of product ratings to understand the impact of quality on sales volume.
-* Segmented negative feedback to identify structural issues in merchant shipping or product description accuracy.
 
-4. The Premium Price Paradox
+
+4. The Premium Price Comparing to the Competition
 * Investigated the behavior of products priced above the market average.
-* Evaluated whether a premium price strategy correlates with lower conversion rates or higher customer status perception.
+
 
 📈 Visualizations
-*(Note: To display your Power BI screenshots here, save them in your repository and update the paths below)*
 
-* **Overview and Sales Performance**
-  
-
-* **Rating and Customer Sentiment Analysis**
-  
-
-* **The Premium Price Paradox**
+<img width="1396" height="787" alt="image" src="https://github.com/user-attachments/assets/f9d4fe85-e254-4f28-9c62-49a2db00a12b" />
+<img width="1393" height="786" alt="image" src="https://github.com/user-attachments/assets/701440c5-68e9-4937-8fe8-17eb5ff043cb" />
 
 
 💡 Business Insights
 
 📅 Sales Performance & "Summer Effect"
-* Women's Fashion is the absolute leader in sales volume, but this insight comes with a major caveat: the dataset is restricted to August. This introduces a heavy seasonal bias (Summer clothes). Strategy must be diversified to other niches to mitigate sharp revenue drops during the winter season.
+*  In terms of sales volume, Women's Fashion is the clear market leader. However, it's important to note that this analysis is based on data from August alone. This introduces a significant seasonal bias towards summer clothing. To avoid sudden drops in revenue during quieter periods, it is vital to spread the strategy across a range of other products. It is not possible for us to determine whether the male fashion is dominant in other seasons.
 
 ⭐ Customer Sentiment & Supplier Risk
-* **20% Negative Ratings:** The analysis revealed a critical pain point—nearly 1 in 5 customers (20%) leaves unsatisfying feedback after purchase. 
-* There is an absolute, direct correlation between higher ratings and sales volume. Products with higher ratings consistently drive the most sales volume, meaning merchants with consistent low scores act as a drag on the platform's overall conversion rate.
+* **20% Negative Ratings:** The analysis revealed a critical pain point—nearly 1 in 5 customers (17.41%) leaves unsatisfying feedback after purchase. 
+*  Higher ratings are directly correlated with increased sales volume. Products with higher ratings always sell better. This means that merchants with low ratings have a negative effect on the platform's overall conversion rate.
 
 🏷️ Pricing Strategies
-* Products with prices significantly higher than the average retail baseline face higher friction. The "Premium Price Paradox" shows that while margins look attractive, lower sales velocity often reduces total cash generation, requiring targeted marketing campaigns or renegotiated margins with merchants.
+* Products that are significantly more expensive than average retail prices sell more. Products with a more competitive price have lower sales velocity, which can cause cash generation, meaning targeted marketing campaigns or renegotiated margins with merchants may be required.
 
 🔍 Conclusions
-* **Supplier Quality Audit:** The most actionable finding is the 20% negative feedback rate. My primary recommendation if managing this operation would be to enforce immediate quality audits on bottom-tier suppliers. Reviewing and screening the quality of products before they go live would directly protect customer lifetime value (LTV).
-* **Data Constraints:** The data is frozen in August 2020, we lack visibility on other seasons performance. Furthermore, critical metrics such as shipping times, purchase costs (COGS), and clicks are missing.
-* **Niche Diversification:** Relying too heavily on a single seasonal category is a structural risk. Expanding the catalog focus toward timeless categories (e.g., gadgets, accessories) is essential for long-term operational stability.
+* **Supplier Quality Audit:**  The most actionable finding is the 20% negative feedback rate. So, if you're going to manage this operation, the main thing I'd suggest is that you get some quality audits done straight away on the bottom-tier suppliers.
+* **Wowen's Fashion: The “Summer Effect”**: Although women's fashion leads in sales, the data is based on a summer month, which artificially inflates the results for this category.
+* **Data Limitation**: The data is frozen in August 2020, we lack visibility on other seasons performance. Furthermore, critical metrics such as shipping times, purchase costs (COGS), and clicks are missing.
+ *  Relying too heavily on a single seasonal category is a structural risk. Expanding the catalog focus toward timeless categories (e.g., gadgets, accessories) is essential for long-term operational stability.
+* **Premium Price Paradox**: Products priced above the market average are among the best-selling items.
+ * Perceived quality > Low price.
+ * Opportunity to increase the average value.
+
