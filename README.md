@@ -3,6 +3,7 @@
 Exploratory performance and market analysis of the Wish e-commerce platform (Europe) using MySQL and Power BI.
 
 📌 Project Overview
+
 This project focuses on a strategic analysis of real e-commerce data from the Wish platform, centered on the European market during August 2020. Using MySQL for data processing and Power BI for interactive visualization, the main goal was to evaluate sales performance, detect trending products, analyze customer sentiment, and examine price margins.
 
 🛠️ Tech Stack
@@ -36,6 +37,7 @@ This project focuses on a strategic analysis of real e-commerce data from the Wi
 
 <img width="1396" height="787" alt="image" src="https://github.com/user-attachments/assets/f9d4fe85-e254-4f28-9c62-49a2db00a12b" />
 <img width="1393" height="786" alt="image" src="https://github.com/user-attachments/assets/701440c5-68e9-4937-8fe8-17eb5ff043cb" />
+
 
 
 💡 Business Insights
